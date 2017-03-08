@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒布局</title>
+	<style type="text/css">
+		#container{
+			/*外层布局*/
+			display: -webkit-box;
+			/*display:box 直接这样写是无效的*/
+			width: 100%;
+		}
+		#left-sidebar{
+			width: 200px;
+			padding: 20px;
+			background-color: orange;
+		}
+		#content{
+			width: 300px;
+			padding: 20px;
+			background-color: yellow;
+		}
+		#right-sidebar{
+			width: 200px;
+			padding: 20px;
+			background-color: limegreen;
+		}
+
+		#left-sidebar,
+		#content,
+		#right-sidebar{
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<article id="container">
+		<section id="left-sidebar"></section>
+		<section id="content"></section>
+		<section id="right-sidebar"></section>
+	</article>
+	<!-- 虽然article 占满了 -->
+	<p>我是行内标签啊 article 你的块占满了吗</p>
+</body>
+</html>

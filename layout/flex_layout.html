@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒布局</title>
+	<style type="text/css">
+		#container{
+			/*外层布局*/
+			/*display: -webkit-box;*/
+			display: flex;
+			width: 100%;
+			/*排列方向 colum*/
+			flex-direction: row;
+			
+		}
+		#left-sidebar{
+			order: 1;
+			width: 200px;
+			padding: 20px;
+			background-color: orange;
+		}
+		#content{
+			padding: 20px;
+			flex: 1;
+			/*我是第一个显示的*/
+			order: 2;
+
+			background-color: yellow;
+		}
+		#right-sidebar{
+			width: 200px;
+			padding: 20px;
+			order: 3;
+			background-color: limegreen;
+		}
+
+		#left-sidebar,
+		#content,
+		#right-sidebar{
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<article id="container">
+		<section id="left-sidebar">
+			我是 left-sidebar
+		</section>
+		<section id="content">
+			我是 content
+		</section>
+		<section id="right-sidebar">
+			我是 right-sidebar
+		</section>
+	</article>
+	<!-- 虽然article 占满了 -->
+	<p>我是行内标签啊 article 你的块占满了吗</p>
+</body>
+</html>

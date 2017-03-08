@@ -1,0 +1,45 @@
+$white:#fff;
+$font12:12px;
+$black:#000;
+
+.menu{
+	color:$white;
+	font-size:$font12;
+}
+
+h3{
+	font:{
+	size:60px;
+	weight:normal;
+	family:arial;
+	}
+}
+.newsize{
+	font-size:$font12+3;
+	color:$white -#007892;
+}
+.lgt{
+	color:lighten($black,10%)
+}
+@mixin border-radius($circle:50px){
+	-webkit-border-radius:$circle;
+	-moz-border-radius:$circle;
+	border-radius:$circle;
+}
+
+.circle{
+	@include border-radius(10px);
+}
+
+.circle2{
+	@include border-radius();
+}
+
+ .pclass{
+	border:4px solid #ff9aa9;
+}
+
+.subclas{
+	@extend .pclass;
+	border-width:3px;
+}

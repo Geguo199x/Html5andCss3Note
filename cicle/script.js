@@ -90,12 +90,13 @@ function drawPointer(context){
     // 1.获取当前时间
     var date=new Date();
     var hours=date.getHours();//0-23
+
     var min=date.getMinutes();//0-59
     var sec=date.getSeconds();
 
     console.log("时"+hours+":"+min+":"+sec);
 
-    var harc=(hours/24+min/60/24+sec/60/60/24)*Math.PI*2;
+    var harc=(hours%12/12+min/60/24+sec/60/60/24)*Math.PI*2;
     var marc=(min/60+sec/60/60)*Math.PI*2;
     var sarc=(sec/60)*Math.PI*2;
 

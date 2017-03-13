@@ -96,7 +96,11 @@ function drawPointer(context){
 
     console.log("时"+hours+":"+min+":"+sec);
 
+<<<<<<< HEAD:cicle/script.js
     var harc=(hours%12/12+min/60/24+sec/60/60/24)*Math.PI*2;
+=======
+    var harc=(hours+min/60/24+sec/60/60/24)%12/12*Math.PI*2;
+>>>>>>> 7b82242ab3b3ac222e75813bc4cbf9dcdbfba8de:Chapter5_Canvas/watchboard/script.js
     var marc=(min/60+sec/60/60)*Math.PI*2;
     var sarc=(sec/60)*Math.PI*2;
 
